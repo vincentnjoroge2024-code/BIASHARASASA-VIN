@@ -1,0 +1,33 @@
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+🔌 Supabase integration status: ACTIVE (Target: https://glfdyruqmkpdhfzbewal.supabase.co)
+✅ Supabase connected & fully activated (Global PostgreSQL: https://glfdyruqmkpdhfzbewal.supabase.co)
+⚠️ Redis unavailable - using memory cache
+✅ SQLite Database initialized with WAL resilience & durability
+🛡️ SQLite Database integrity check: ok
+✅ Existing database active: 5 transactions, 0 inventory items, 0 custom traders.
+🔗 Initializing Supabase schema...
+✅ Supabase initialized in hybrid sync mode (authoritative SQLite + cloud sync)
+✅ Supabase integration ready
+✅ Supabase schema initialized
+🌱 Seeding database...
+[DB] Seeding essential data...
+[DB] Updated essential user: Njoroge@businesspro.com
+[DB] Updated essential user: admin@businesspro.com
+[DB] Updated essential user: admin@busnesspro.com
+[DB] Updated essential user: baraka@businesspro.com
+[DB] Updated essential user: promoter@businesspro.com
+[DB] Updated essential user: philiam@businesspeo.com
+[DB] Updated essential user: Joy@businesspeo.com
+✅ Seeding complete
+WebSocket server error: Port 24678 is already in use
+Uncaught exception: Error: listen EADDRINUSE: address already in use 0.0.0.0:8080
+    at Server.setupListenHandle [as _listen2] (node:net:1941:16)
+    at listenInCluster (node:net:1998:12)
+    at node:net:2207:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8080
+}

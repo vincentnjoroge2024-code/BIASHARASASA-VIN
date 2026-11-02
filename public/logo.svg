@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- White rounded backdrop for clean contrast -->
+  <rect width="100" height="100" rx="20" fill="#FFFFFF" fill-opacity="0" />
+  
+  <!-- 4 Ascending Growth Bars (Blue, Green, Blue, Red) -->
+  <rect x="14" y="60" width="13" height="28" rx="3.5" fill="#0073CF" />
+  <rect x="32" y="48" width="13" height="40" rx="3.5" fill="#00A352" />
+  <rect x="50" y="38" width="13" height="50" rx="3.5" fill="#0073CF" />
+  <rect x="68" y="26" width="13" height="62" rx="3.5" fill="#E52329" />
+  
+  <!-- Curved Upward Green Growth Arrow -->
+  <path 
+    d="M 18 54 C 36 47, 56 32, 74 16 L 68 11 L 89 5 L 84 26 L 79 21 C 61 36, 42 49, 24 57 Z" 
+    fill="#058038" 
+  />
+</svg>

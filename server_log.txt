@@ -1,0 +1,7 @@
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+🔌 Supabase integration status: ACTIVE (Target: https://glfdyruqmkpdhfzbewal.supabase.co)
+✅ Supabase connected & fully activated (Global PostgreSQL: https://glfdyruqmkpdhfzbewal.supabase.co)
+⚠️ Redis unavailable - using memory cache
+✅ SQLite Database initialized with WAL resilience & durability
+🛡️ SQLite Database integrity check: ok
+✅ Existing database active: 5 transactions, 0 inventory items, 0 custom traders.

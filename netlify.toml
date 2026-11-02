@@ -1,0 +1,37 @@
+# Netlify Configuration for BiasharaSasa Multi-Tenant SaaS
+# Safe-Deploy Contract & Asset Cache Segregation
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-Page Application (SPA) routing: fallback all non-asset requests to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache-Control: index.html must NEVER be cached by browsers or edge caches
+# This guarantees that after every Netlify deploy, users immediately receive
+# the latest immutable chunk hashes, eliminating version mismatch & stale hook errors.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+
+# Cache-Control: Hashed Vite assets are content-addressed and immutable
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security & Isolation headers for all routes
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"

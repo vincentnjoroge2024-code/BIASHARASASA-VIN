@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "schemaVersion": 1,
   "database": "supabase",
-  "timestamp": "2026-11-02T11:42:41.133Z",
+  "timestamp": "2026-11-02T11:52:41.152Z",
   "counts": {
     "metadata": 1,
     "traders": 7,

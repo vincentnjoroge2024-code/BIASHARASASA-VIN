@@ -5,8 +5,14 @@ __pycache__/
 
 # Local SQLite databases
 *.db
+*.db-shm
+*.db-wal
 control_plane.db
 tenants_dbs/
+
+# Local snapshots and generated production assets
+backups/
+dist/
 
 # Virtual environments
 venv/

@@ -1,10 +1,23 @@
-# BiasharaSasa Multi-Tenant SaaS Backend
+# BiasharaSasa
 
-A Python Flask multi-tenant backend featuring isolated SQLite databases per tenant, a Control Plane directory, a 2-step authentication workflow (Password + JWT Workspace Link), and Role-Based Access Control (RBAC).
+BiasharaSasa is a React and TypeScript business management app with a point of sale, inventory, reporting, and optional finance, tax, production, and HR modules. An Express server provides the API and serves the built React app.
 
-## Installation & Setup
+## Run locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-   cd your-repo-name
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. To make a production build and run it locally:
+
+```bash
+npm run build
+npm run start
+```
+
+## Deploy to Railway
+
+Railway builds the frontend and backend with `npm run build`, then starts the Express server with `npm run start`. The Railway configuration is in `railway.json`; the server listens on Railway's assigned `PORT` and serves the React files from `dist`. Set any required database and authentication environment variables in Railway's service settings; do not commit secrets.
+
+`app.py` is a separate Flask dashboard and is not the application entry point for the Railway deployment.

@@ -30,7 +30,7 @@ const io = new Server(httpServer, {
     methods: ['GET', 'POST']
   }
 });
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 // Resilience & Snapshot Backup Paths
 const isServerless = typeof process !== 'undefined' && !!(process.env.NETLIFY || process.env.LAMBDA_TASK_ROOT || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.VERCEL);
